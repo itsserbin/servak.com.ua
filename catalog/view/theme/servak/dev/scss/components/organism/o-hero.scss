@@ -1,0 +1,34 @@
+.o-hero {
+    padding-bottom: 2.5rem;
+    &-slider {
+        transition: .5s;
+        background: $gray-light;
+        margin-left: 360px;
+        height: 550px;
+        position: relative;
+    }
+    @include mq('desktop') {
+        padding-bottom: 2.25rem;
+        &-slider {
+            margin-left: 300px;
+            height: 520px;
+        }
+    }
+    @include mq('tablet-wide') {
+        padding-bottom: 2rem;
+        &-slider {
+            margin-left: 0;
+            height: 440px;
+        }
+    }
+    @include mq('tablet') {
+        padding-bottom: 1.75rem;
+        &-slider {
+            margin-left: 0;
+            height: auto;
+            .swiper-slide {
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.m-lang {
+    position: relative;
+    // margin-right: 1rem;
+    // display: flex;
+    // align-items: center;
+    // &::after {
+    //     content: "";
+    //     display: block;
+    //     width: 9px;
+    //     height: 6px;
+    //     background: url('./image/lang-arrow.svg') no-repeat;
+    //     margin-left: .5rem;
+    //     transition: .3s;
+    // }
+    // &__title {
+    //     @extend %g-mid;
+    //     font-size: 1.125rem;
+    //     color: $white;
+    //     cursor: pointer;
+    // }
+    &__list {
+        position: absolute;
+        top: 110%;
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        z-index: 61;
+        a {
+            font-size: 1.125rem;
+            text-decoration: none;
+        }
+    }
+
+    // &:hover {
+    //     .m-lang__list {
+    //         max-height: 100px;
+    //     }
+
+    //     &::after {
+    //         transform: rotate(-180deg);
+    //     }
+    // }
+    @include mq('tablet') {
+        display: none;
+    }
+}

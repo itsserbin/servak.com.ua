@@ -1,0 +1,65 @@
+.a-pictogram {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray;
+    &-icon {
+        margin-right: 1rem;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 6px;
+        span {
+            font-size: 2rem;
+            color: $purple;
+            .sm {
+                font-size: .75rem;
+            }
+        }
+        p {
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+    }
+    @include mq('desktop') {
+        &-icon {
+            margin-right: .75rem;
+            margin-bottom: .75rem;
+            width: 60px;
+            height: 60px;
+            span {
+                font-size: 1.75rem;
+                .sm {
+                    font-size: .625rem;
+                }
+            }
+            p {
+                font-size: .5rem;
+                text-align: center;
+            }
+        }
+    }
+    @include mq('tablet-wide') {
+        &-icon {
+            margin-right: .5rem;
+            margin-bottom: .5rem;
+            width: 54px;
+            height: 54px;
+            span {
+                font-size: 1.5rem;
+                .sm {
+                    font-size: .5rem;
+                }
+            }
+            p {
+                font-size: .5rem;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.a-calc {
+    margin-right: 2rem;
+    svg {
+        margin-right: .625rem;
+    }
+    @include mq('desktop') {
+        margin-right: 1rem;
+    }
+    @include mq('phone-wide') {
+        align-items: center;
+        svg {
+            margin-right: .375rem;
+            width: .75rem;
+            height: .75rem;
+        }
+    }
+}

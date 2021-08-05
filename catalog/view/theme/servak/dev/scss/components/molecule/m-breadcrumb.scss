@@ -1,0 +1,65 @@
+.m-breadcrumb {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow-x: auto;
+    &-list {
+        display: flex;
+        align-items: center;
+        font-size: .875rem;
+        width: max-content;
+        &::after {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+            height: 42px;
+            width: 100px;
+            position: absolute;
+            z-index: 1;
+            content: '';
+            display: block;
+            right: 0;  
+            pointer-events: none;
+          }
+        a {
+            display: flex;
+            align-items: center;
+            margin-right: .5rem;
+            margin-bottom: .25rem;
+            &::after {
+                margin-left: .25rem;
+                content: '';
+                background: url(../image/arrow_right_alt.svg) no-repeat;
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                display: block;
+            }
+        }
+        span {
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+            margin-bottom: .25rem;
+            display: block;
+            width: max-content;
+        }
+    }
+    @include mq('desktop') {
+        &-list {
+            a {
+                &::after {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+    @include mq('tablet-wide') {
+        &-list {
+            font-size: .75rem;
+            a {
+                &::after {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

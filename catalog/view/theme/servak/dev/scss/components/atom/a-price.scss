@@ -1,0 +1,18 @@
+.a-price {
+    display: flex;
+    flex-direction: column;
+    &.e--card {
+        .price {
+            @extend%-semi;
+            font-size: 1.125rem;
+            line-height: 1.25;
+            color: $black;
+        }
+        .old-price {
+            @extend%-semi;
+            font-size: 1rem;
+            line-height: 1.25;
+            color: red;
+        }
+    }
+}

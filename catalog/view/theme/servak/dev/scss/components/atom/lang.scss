@@ -1,0 +1,44 @@
+.lang {
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    padding: .5rem;
+    &-title {
+        position: relative;
+        opacity: .75;
+        transition: .3s;
+        
+        &:after {
+            content: '';
+            display: inline-block;
+            border: 4px solid transparent;            
+            border-top: 4px solid white;            
+            margin-left: 5px;
+        }
+    }
+
+    &-list {
+        position: absolute;
+        top: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+
+    &.show {
+        .lang-list {
+            position: absolute;
+            top: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+    }
+
+    &:hover {
+
+        .lang-title {
+            opacity: 1; 
+        }
+    }
+}

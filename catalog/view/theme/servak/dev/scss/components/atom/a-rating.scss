@@ -1,0 +1,54 @@
+.a-rating {
+    &-result {
+        width: 50%;
+        display: flex;
+        &.e--lg {
+            span {
+                font-size: 1.5rem;
+            }
+        }
+        span {
+            padding: 0;
+            font-size: .875rem;
+            margin: 0 3px;
+            line-height: 1;
+            color: lightgrey;
+        }
+        & > span:before {
+            content: '★';
+        }
+        & > span.active {
+            color: $purple;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-result {
+            &.e--lg {
+                span {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+    @include mq('tablet') {
+        &-result {
+            &.e--lg {
+                span {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+    @include mq('phablet') {
+        &-result {
+            &.e--lg {
+                span {
+                    font-size: .875rem;
+                }
+            }
+            span {
+                font-size: .75rem;
+            }
+        }
+    }
+}

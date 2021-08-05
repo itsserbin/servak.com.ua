@@ -1,0 +1,23 @@
+.a-show-more {
+    margin-top: 2rem;
+    opacity: .7;
+    transition: .5s;
+    position: relative;
+    display: inline-block;
+    &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: black;
+        transition: .5s;
+    }
+    &:hover {
+        opacity: 1;
+        &::after {
+            opacity: 1;
+        }
+    }
+}

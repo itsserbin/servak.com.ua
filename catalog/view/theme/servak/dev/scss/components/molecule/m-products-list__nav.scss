@@ -1,0 +1,36 @@
+.m-products-list__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    ul {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem;
+        flex-wrap: wrap;
+        li {
+            padding: 0 .5rem;
+            a.active {
+                transition: .5s;
+                color: $purple;
+                text-decoration: underline;
+            }
+            &:hover {
+                a {
+                    color: $purple;
+                    text-decoration: underline;
+                }   
+            }
+        }
+    }
+    .a-next, .a-prev {
+        &:hover {
+            svg {
+                path {
+                    transition: .5s;
+                    fill: $purple;
+                }
+            }
+        }
+    }
+}

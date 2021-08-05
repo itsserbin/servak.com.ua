@@ -1,0 +1,21 @@
+.o-login {
+    &-content {
+        display: flex;
+    }
+    h1 {
+        width: 100%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $gray;
+    }
+    @include mq('tablet-wide') {
+        &-content {
+            justify-content: space-between;
+        }
+    }
+    @include mq('tablet') {
+        &-content {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

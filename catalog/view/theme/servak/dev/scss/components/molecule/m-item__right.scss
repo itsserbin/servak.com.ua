@@ -1,0 +1,35 @@
+.m-item__right {
+    h5 {
+        @extend%-mid;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        text-transform: capitalize;
+        color: $black;
+        margin-bottom: 1rem;
+    }
+    p {
+        line-height: 1.35;
+        color: $black;
+    }
+    @include mq('desktop') {
+        h5 {
+            font-size: 1.375rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        h5 {
+            font-size: 1.25rem;
+            margin-bottom: .75rem;
+        }
+    }
+    @include mq('tablet') {
+        h5 {
+            font-size: 1.125rem;
+        }
+    }
+    @include mq('phablet') {
+        h5 {
+            font-size: 1rem;
+        }
+    }
+}

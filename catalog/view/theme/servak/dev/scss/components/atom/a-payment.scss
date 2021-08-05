@@ -1,0 +1,21 @@
+.a-payment {
+    &-other {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $gray;
+        margin-bottom: 1rem;
+        a {
+            display: flex;
+            align-items: center;
+            transition: .5s;
+            margin-bottom: 1rem;
+            &:hover {
+                text-decoration: underline;
+            }
+            img {
+                display: block;
+                margin-right: .5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.a-date {
+    @extend%-mid;
+    color:  $gray;
+    margin-bottom: 1.5rem;
+    @include mq('desktop') {
+        margin-bottom: 1.25rem;
+    }
+    @include mq('tablet-wide') {
+        margin-bottom: 1.125rem;
+    }
+    @include mq('tablet') {
+        margin-bottom: .875rem;
+    }
+    @include mq('phone-wide') {
+        margin-bottom: .75rem;
+    }
+}

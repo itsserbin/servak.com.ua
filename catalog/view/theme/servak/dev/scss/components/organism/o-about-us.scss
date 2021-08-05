@@ -1,0 +1,12 @@
+.o-about-us {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    @include mq('tablet') {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    @include mq('phone-wide') {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}

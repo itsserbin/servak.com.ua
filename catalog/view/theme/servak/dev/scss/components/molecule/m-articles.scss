@@ -1,0 +1,130 @@
+.m-articles {
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: 40px;
+        .m-video-card {
+            grid-column: span 4;
+            &__desc {
+                border-bottom: 1px solid $purple;
+                a {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    &-info {
+        position: absolute;
+        right: .5rem;
+        bottom: .5rem;
+        z-index: 23;
+        display: flex;
+        align-items: center;
+        
+        &.e--black {
+            position: static;
+            .a-date {
+                color: black;
+            }    
+            .views {
+                svg {
+                    path {
+                        stroke:black;
+                    }
+                }
+            }
+        }
+        .a-date {
+            margin-bottom: 0;
+            margin-right: 1rem;
+            color: white;
+        }
+        .views {
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: .5rem;
+            }
+        }
+    }
+    &-card {
+        grid-column: span 4;
+        &__desc {
+            padding: 1rem;
+            border-bottom: 1px solid $purple;
+            a {
+                margin-bottom: 1rem;
+                transition: .3s;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            p.e--sm.info {
+                opacity: .7;
+                margin-bottom: 1rem;
+                -webkit-line-clamp: 4;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+        &__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+    }
+    @include mq('desktop') {
+        &-grid {
+            gap: 30px;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-card {
+            &__desc {
+                padding: 1rem .5rem;
+            }
+        }
+        &-info {
+            .a-date {
+                margin-right: .25rem;
+            }
+            .views {
+                svg {
+                    margin-right: .25rem;
+                    width: 1rem;
+                    height: 1rem;
+                    object-fit: contain;
+                }
+            }
+        }
+        &-grid {
+            gap: 20px;
+        }
+    }
+    @include mq('tablet') {
+        &-grid {
+            .m-video-card {
+                grid-column: span 6;
+            }
+        }
+        &-card {
+            grid-column: span 6;
+            &__desc {
+                padding: 1rem .25rem;
+            }
+        }
+    }
+    @include mq('phone-wide') {
+        &-grid {
+            .m-video-card {
+                grid-column: span 12;
+            }
+        }
+        &-card {
+            grid-column: span 12;
+        }
+    }
+}

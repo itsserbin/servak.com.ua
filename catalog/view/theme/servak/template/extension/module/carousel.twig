@@ -1,0 +1,40 @@
+<section class="o-video-index">
+    <div class="container-content">
+        <div class="a-section-title">
+            <h2>Пoлeзнoe видeo</h2>
+            <a href="#" class="a-link a-text">YouTube</a>
+        </div>
+        <div class="o-video-slider o-video-slider{{ module }}">
+            <div class="swiper-wrapper">
+                {% for banner in banners %}
+                    <div class="swiper-slide">
+                        <div class="m-video-card">
+                            {% if banner.link %}
+                                <a href="{{ banner.link }}" class="m-video-card__img">
+                                    <img src="{{ banner.image }}" alt="{{ banner.title }}">
+                                    <span></span>
+                                </a>
+                                <a href="{{ banner.link }}" class="m-video-card__desc">
+                                    <p class="a-text e--lg">
+                                        {{ banner.title }}
+                                    </p>
+                                </a>
+                            {% else %}
+                                <a href="javascript:;" class="m-video-card__img">
+                                    <img src="{{ banner.image }}" alt="">
+                                    <span></span>
+                                </a>
+                                <a href="javascript:;" class="m-video-card__desc">
+                                    <p class="a-text e--lg">
+                                        {{ banner.title }}
+                                    </p>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>

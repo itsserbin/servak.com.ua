@@ -1,0 +1,21 @@
+.m-markers {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 7;
+    opacity: 0;
+    transition: .5s;
+    li {
+        margin-bottom: 1.25rem;
+        opacity: .7;
+        transition: .5s;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

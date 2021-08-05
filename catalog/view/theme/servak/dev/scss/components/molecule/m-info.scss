@@ -1,0 +1,98 @@
+.m-info {
+    display: flex;
+    padding-bottom: 4rem;
+    &-left {
+        transition: .3s;
+        width: 300px;
+        margin-right: 2.5rem;
+        flex-shrink: 0;
+    }
+    &-content {
+        p {
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style: disc;
+            padding-left: 1rem;
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    &-nav {
+        padding-top: 1.5rem;
+        ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                margin-bottom: 1.25rem;
+                a {
+                    &:hover {
+                        color: $purple;
+                        text-decoration: underline;
+                    }
+                    &.active {
+                        color: $purple;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    @include mq('desktop') {
+        &-left {
+            width: 260px;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-left {
+            width: 200px;
+        }
+    }
+    @include mq('tablet') {
+        flex-direction: column;
+        &-left {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+        &-nav {
+            padding-top: .5rem;
+            position: relative;
+            &::after {
+                background-image: linear-gradient(to right,rgba(255,255,255,0),#fff);
+                height: 42px;
+                width: 100px;
+                position: absolute;
+                z-index: 1;
+                content: '';
+                display: block;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+            }
+            ul {
+                flex-direction: row;
+                overflow-x: auto;
+                &::-webkit-scrollbar {
+                    display: none;
+                  }
+                li {
+                    margin-bottom: 0;
+                    a {
+                        padding: .5rem;
+                        width: max-content;
+                        &:hover {
+                            color: $purple;
+                            text-decoration: underline;
+                        }
+                        &.active {
+                            color: $purple;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

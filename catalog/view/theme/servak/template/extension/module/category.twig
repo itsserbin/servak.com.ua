@@ -1,0 +1,21 @@
+<div class="list-group">
+    <div class="m-header-catalog__list">
+        {% for category in categories %}
+
+            <li class="m-header-catalog__item">
+                <a href="{{ category.href }}">{{ category.name }}</a>
+                {% if category.children %}
+                    {% for child in category.children %}
+
+                        <ul class="m-header-catalog__list-sub">
+                            <li>
+                                <a href="{{ child.href }}">{{ child.name }}</a>
+                            </li>
+                        </ul>
+
+                    {% endfor %}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </div>
+</div>

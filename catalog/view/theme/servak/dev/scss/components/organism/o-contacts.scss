@@ -1,0 +1,30 @@
+.o-contacts {
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-left {
+        width: 48.85%;
+    }
+    &-right {
+        width: 48.85%;
+        h1, h2 {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-content {
+            flex-direction: column-reverse;
+        }
+        &-left {
+            width: 100%;
+            
+        }
+        &-right {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+}

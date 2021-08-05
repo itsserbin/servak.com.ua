@@ -1,0 +1,29 @@
+.a-logo {
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    margin-right: 1rem;
+    @include mq('desktop') {
+        img {
+            width: 180px;
+            transition: .5s;
+        }
+    }
+    @include mq('tablet-wide') {
+        flex: 1;
+        img {
+            width: 160px;
+        }
+    }
+    @include mq('tablet') {
+        img {
+            width: 120px;
+        }
+    }
+    @include mq('phone-wide') {
+        img {
+            width: 100px;
+        }
+    }
+}

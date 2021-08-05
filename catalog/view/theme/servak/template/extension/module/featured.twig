@@ -1,0 +1,109 @@
+<section class="o-recommendation">
+    <div class="container-content">
+        <div class="a-section-title">
+            <h2>{{ heading_title }}</h2>
+            <a href="" class="a-link a-text">Cмотреть все</a>
+        </div>
+        <div class="o-recommendation-slider">
+            <div class="swiper-wrapper">
+                {% for product in products %}
+                    <div class="swiper-slide">
+                        <div class="m-product-card">
+                            <ul class="m-markers">
+                                <li>
+                                    <a href="javascript:;" class="link-to-fav">
+                                        <img src="catalog/view/theme/servak/image/markers/wpf_like.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="link-to-comparison">
+                                        <img src="catalog/view/theme/servak/image/markers/exchange.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+
+                            {% if product.special %}
+                                <ul class="m-label">
+                                    <li>
+                                        {{ product.special }}
+                                        {# {{ "- #{(((product.price-product.special)/product.price)*100)} %" }} #}
+                                    </li>
+                                </ul>
+                            {% endif %}
+
+                            <a href="{{ product.name }}" class="m-product-card__img product-card-link">
+                                <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}">
+                            </a>
+                            <div class="m-product-card__content">
+                                {% if product.rating %}
+                                    <div class="m-product-card__rating">
+                                        <div class="a-rating-result">
+                                            {% for i in 5 %}
+                                                {% if product.rating < i %}
+                                                    <span></span>
+                                                {% else %}
+                                                    <span class="active"></span>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                        <a href="../product-page.html#reviews" class="a-reviews-count a-text e--sm">14
+                                            отзывов</a>
+                                    </div>
+                                {% endif %}
+                                <a href="{{ product.href }}" class="a-product-card-name a-text e--lg product-card-link">
+                                    {{ product.name }}
+                                </a>
+                                <a href="{{ product.href }}" class="product-card-link e--flex-one">
+                                    <ul class="m-characteristics-list">
+                                        <li class="a-characteristic">
+                                            <img src="../../image/icons/processor.svg" alt="">
+                                            <p>{{ product.description }}</p>
+                                        </li>
+                                    </ul>
+                                </a>
+
+                                <div class="m-product-card__bottom">
+
+                                    {% if product.price %}
+                                        <div class="a-price e--card">
+                                            {% if not product.special %}
+                                                <span class="price"> {{ product.price }}</span>
+                                            {% else %}
+                                                <span class="old-price e--red"><s>{{ product.price }}</s></span>
+                                                <span class="price">{{ product.special }}</span>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+
+                                    <a href="{{ product.href }}" class="a-btn e--circle">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M22.3864 25.183C23.3128 25.183 24.0638 24.432 24.0638 23.5055C24.0638 22.5791 23.3128 21.8281 22.3864 21.8281C21.46 21.8281 20.709 22.5791 20.709 23.5055C20.709 24.432 21.46 25.183 22.3864 25.183Z"
+                                                  stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M11.2048 25.183C12.1312 25.183 12.8822 24.432 12.8822 23.5055C12.8822 22.5791 12.1312 21.8281 11.2048 21.8281C10.2783 21.8281 9.52734 22.5791 9.52734 23.5055C9.52734 24.432 10.2783 25.183 11.2048 25.183Z"
+                                                  stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M6.17125 5.05345H25.182L22.9454 17.3545H8.4078L6.17125 5.05345ZM6.17125 5.05345C5.98487 4.30793 5.05297 2.81689 2.81641 2.81689"
+                                                  stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                            <path d="M22.9449 17.355H8.40726H6.42876C4.43341 17.355 3.375 18.2286 3.375 19.5915C3.375 20.9544 4.43341 21.8281 6.42876 21.8281H22.3858"
+                                                  stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                                  stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="m-slider-nav__bottom">
+                <div class="a-slider-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="a-slider-next"></div>
+            </div>
+        </div>
+    </div>
+</section>

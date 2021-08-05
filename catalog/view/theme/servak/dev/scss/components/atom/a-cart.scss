@@ -1,0 +1,111 @@
+.a-cart {
+    &-id {
+        font-size: .875rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: .5rem;
+        .id {
+            margin-left: .25rem;
+        }
+    }
+    &-name {
+        padding-bottom: .5rem;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &-img {
+        grid-column: span 5;
+    }
+    &-desc {
+        grid-column: span 11;
+    }
+    &-price {
+        grid-column: span 6;
+    }
+    &-quantity {
+        grid-column: span 6;
+        .quantity {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid black;
+            input {
+                padding: .5rem;
+                width: 60px;
+                text-align: center;
+            }
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+    &-total {
+        grid-column: span 6;
+    }
+    &-del {
+        grid-column: span 2;
+        font-size: 1.375rem;
+        width: 40px;
+        height: 40px;
+        background: $gray-light;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s;
+        justify-self: self-end;
+        &:hover {
+            background: $gray;
+        }
+    }
+    &-sum {
+        margin-right: 2rem;
+        .a-sum {
+            display: flex;
+            align-items: center;
+            .sum {
+                margin-left: .25rem;
+            }
+        }
+    }
+    @include mq('tablet') {
+        &-img {
+            grid-column: span 3;
+        }
+        &-desc {
+            grid-column: span 9;
+        }
+        &-quantity {
+            grid-column: span 5;
+        }
+        &-total {
+            grid-column: span 5;
+            text-align: center;
+        }
+        &-del {
+            grid-column: span 2;
+        }
+        &-sum {
+            margin-right: 1rem;
+        }
+    }
+    @include mq('phablet') {
+        &-total {
+            display: none;
+        }
+        &-img {
+            grid-column: span 3;
+        }
+        &-desc {
+            grid-column: span 9;
+        }
+        &-quantity {
+            grid-column: span 6;
+        }
+        &-del {
+            grid-column: span 6;
+        }
+    }
+
+}

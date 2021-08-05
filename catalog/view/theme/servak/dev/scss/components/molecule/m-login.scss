@@ -1,0 +1,159 @@
+.m-login {
+    &-form {
+        margin-bottom: 5rem;
+        width: 100%;
+        max-width: 360px;
+        margin-right: 200px;
+        &:last-child {
+            margin-right: 0;
+        }
+        h2 {
+            @extend%-semi;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #404040;
+        }
+        .inputs {
+            margin-bottom: 1.5rem;
+            input {
+                padding: .75rem 1rem .75rem 0;
+                border-bottom: 1px solid black;
+            }
+            .input {
+                margin-bottom: 1rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .a-password {
+                position: relative;
+                .password-control {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: .25rem;
+                    &.active {
+                        svg {
+                            path {
+                                stroke: $purple;
+                            }
+                        }
+                    }
+                    &:hover {
+                        svg {
+                            path {
+                                stroke: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &.line {
+                margin-bottom: 1.75rem;
+                p {
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                }
+            }
+            span {
+                display: block;
+                height: 1px;
+                width: 100%;
+                background: black;
+            }
+        }
+        .remind {
+            margin-bottom: 1.75rem;
+            label {
+                display: flex;
+                align-items: center;
+                font-size: .75rem;
+                input {
+                    width: auto;
+                    margin: 0;
+                    margin-right: .5rem;
+                }
+            }
+            a {
+                opacity: .7;
+                font-size: .75rem;
+                text-decoration: underline;
+                transition: .3;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        .login-btn {
+            margin-bottom: 1.75rem;
+        }
+        .login-social {
+            a {
+                &:first-child {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+    @include mq('desktop') {
+        &-form {
+            h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1.75rem;
+            }
+        }
+    }
+    @include mq('tablet-wide') {
+        &-form {
+            margin-right: 40px;
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .inputs {
+                margin-bottom: 1.25rem;
+            }
+            .login-btn {
+                margin-bottom: 1.25rem;
+            }
+            &__flex {
+                &.line {
+                    margin-bottom: 1.25rem;
+                }
+            }
+        }
+    }
+    @include mq('tablet') {
+        &-form {
+            margin-right: 0;
+            h2 {
+                font-size: 1.25rem;
+                margin-bottom: 1.25rem;
+            }
+            .login-social {
+                a {
+                    &:first-child {
+                        margin-right: .5rem;
+                    }
+                }
+            }
+        }
+        
+    }
+    @include mq('phone-wide') {
+        &-form {
+            h2 {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+        
+    }
+    
+}

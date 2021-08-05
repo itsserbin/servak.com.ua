@@ -1,0 +1,44 @@
+.a-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    &::after {
+        transition: .5s;
+        content: '+';
+        display: block;
+        margin-left: 2rem;
+        font-weight: 500;
+        font-size: 2.5rem;
+    }
+    &.active {
+        &::after {
+            content: '-';
+        }
+    }
+    @include mq('desktop') {
+        &::after {
+            font-size: 2.25rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        &::after {
+            font-size: 2rem;
+        }
+    }
+    @include mq('tablet') {
+        &::after {
+            font-size: 1.75rem;
+        }
+    }
+    @include mq('tablet-small') {
+        &::after {
+            font-size: 1.5rem;
+        }
+    }
+    @include mq('phone-wide') {
+        &::after {
+            font-size: 1.25rem;
+        }
+    }
+}

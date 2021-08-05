@@ -1,0 +1,162 @@
+.m-header {
+    &-top {
+        &__left {
+            display: flex;
+            align-items: center;
+            .m-dropdown {
+                &:last-child {
+                    margin-left: 2rem;
+                }
+            }
+        }
+        &__right {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &-catalog {
+        &__item {
+            cursor: pointer;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+            transition: .5s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                background: url(../image/header/chevron-up-sharp.svg) no-repeat;
+                transform: rotate(-90deg);
+                width: 1rem;
+                height: 1rem;
+                background-size: contain;
+                margin-left: .75rem;
+                margin-right: 1.25rem;
+                opacity: .7;
+            }
+            &.e--action {
+                color: $purple;
+                .action {
+                    flex: 1;
+                    color: black;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            &:hover {
+                background: $gray-light;
+                .m-header-catalog__list {
+                    &-sub {
+                        display: block;
+                        
+                    }
+                }
+            }
+        }
+        &__list {
+            &-sub {
+                display: none;
+                top: 0;
+                width: max-content;
+                background: white;
+                position: absolute;
+                left: 100%;
+                li {
+                    padding: 1.25rem;
+                    &:hover {
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq('desktop') {
+        &-top {
+            &__left {
+                .m-dropdown {
+                    margin-left: 0;
+                    margin-right: 1rem;
+                    &:last-child {
+                        margin-left: 0rem;
+                    }
+                }
+            }
+        }
+        &-catalog {
+            &__item {
+                padding-top: 1.125rem;
+                padding-bottom: 1.125rem;
+                font-size: .875rem;
+            }
+            &__list {
+                &-sub {
+                    li {
+                        padding: 1.125rem;
+                        font-size: .75rem;
+                    }
+                }
+            }
+        }
+    }
+    @include mq('tablet-wide') {
+        &-top {
+            &__left {
+                padding-left: 1rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                z-index: 1;
+            }
+        }
+        &-catalog__item {
+            transition: 0s;
+            &:hover {
+                background: none;
+                .m-header-catalog__list {
+                    &-sub {
+                        display: none;
+                        
+                    }
+                }
+            }
+        }
+        &-catalog__list {
+            &.active {
+                .m-header-catalog__item.burger-active {
+                    display: none;
+                    font-weight: 600;
+                    &.active {
+                        display: block;
+                        &::after {
+                            display: none;
+                        }
+                        .m-header-catalog__list-sub.active {
+                            display: block;
+                            position: static;
+                            margin-top: 1rem;
+                            li {
+                                padding: .75rem 0;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq('tablet') {
+        &-top {
+            &__left {
+                padding-top: .75rem;
+                padding-bottom: .75rem;
+            }
+        }
+    }
+}

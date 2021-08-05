@@ -1,0 +1,60 @@
+.a-reviews {
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__right {
+            display: flex;
+            margin-right: 4rem;
+            align-items: center;
+            div {
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+                .count {
+                    color: $gray;
+                    font-size: .875rem;
+                }
+            }
+            a {
+                margin-right: .5rem;
+                &:hover {
+                    svg {
+                        path {
+                            fill: $purple;
+                        }
+                    }
+                }
+            }
+            .a-dislike {
+                svg {
+                    transform: rotate(180deg);
+                }
+                
+            }
+        }
+        &__left {
+            .a-resp {
+                color: $gray;
+                font-size: .875rem;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &-text {
+        margin-bottom: 1.125rem;
+        margin-top: 1.125rem;
+    }
+    &-name {
+        margin-bottom: .75rem;
+    }
+    @include mq('phablet') {
+        &-bottom {
+            &__right {
+                margin-right: 0;
+            }
+        }
+    }
+}

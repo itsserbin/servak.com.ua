@@ -1,0 +1,52 @@
+.m-ordering {
+    &-item {
+        p {
+            margin-bottom: 1rem;
+        }
+        margin-bottom: 1rem;
+        .inputs {
+            display: flex;
+            flex-wrap: wrap;
+            .input {
+                padding: 10px;
+                width: 50%;
+                input {
+                    padding: 1rem;
+                    box-shadow: 0px 3px 10px rgba(90, 92, 102, 0.1);
+                    border-radius: 5px;
+                }
+            }
+        }
+        .radiobuttons {
+            label {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                input {
+                    width: auto;
+                    margin-right: .5rem;
+                }
+            }
+        }
+        .select {
+            width: 50%;
+            select {
+                box-shadow: 0px 3px 10px rgba(90, 92, 102, 0.1);
+                border-radius: 5px;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    @include mq('phone-wide') {
+        &-item {
+            .inputs {
+                .input {
+                    width: 100%;
+                }
+            }
+            .select {
+                width: 100%;
+            }
+        }
+    }
+}

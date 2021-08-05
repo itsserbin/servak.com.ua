@@ -1,0 +1,25 @@
+.m-catalog {
+    &-left {
+        &__content {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            ul {
+                list-style-type: disc;
+                padding-left: 1rem;
+                li {
+                    color: $purple;
+                    margin-bottom: 1.25rem;
+
+                    a {
+                        color: black;
+                        transition: .5s;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

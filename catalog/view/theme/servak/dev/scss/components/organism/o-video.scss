@@ -1,0 +1,93 @@
+.o-video {
+    &-index {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+        overflow: hidden;
+    }
+    .m-articles-info {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .reviews-title {
+        .right {
+            display: flex;
+            align-items: center;
+            .subscribe {
+                margin-right: 1rem;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .a-btn {
+                padding: .75rem 2rem;
+            }
+        }
+    }
+    @include mq('desktop-wide') {
+        &-slider {
+            overflow: hidden;
+        }
+    }
+    @include mq('desktop') {
+        &-index {
+            padding-top: 2.25rem;
+            padding-bottom: 1.75rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-index {
+            padding-top: 2rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+    @include mq('tablet') {
+        &-index {
+            padding-top: 1.75rem;
+            padding-bottom: 1.25rem;
+        }
+        .reviews-title {
+            flex-wrap: wrap;
+            .right {
+                //flex-direction: column;
+                width: 100%;
+                justify-content: flex-end;
+                flex-direction: row-reverse;
+                margin-top: 1.25rem;
+                .subscribe {
+                   margin-left: 1rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .a-btn {
+                    padding: .75rem 2rem;
+                }
+            }
+        }
+    }
+    @include mq('phone-wide') {
+        .reviews-title {
+            flex-wrap: wrap;
+            .right {
+                flex-direction: column-reverse;
+                width: 100%;
+                margin-top: 0;
+                .subscribe {
+                   margin-left: 1rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .a-btn {
+                    padding: .75rem 2rem;
+                    margin-bottom: 1rem;
+                    width: 100%;
+                }
+            }
+        }
+        &-index {
+            padding-top: 1.5rem;
+            padding-bottom: 1.25rem;
+        }
+    }
+}

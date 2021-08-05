@@ -1,0 +1,41 @@
+.o-articles {
+    padding-bottom: 3rem;
+    &-tabs {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+        justify-content: space-evenly;
+        li {
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+            padding: .75rem .25rem;
+            background: $gray-light;
+            margin-right: .5rem;
+            border-radius: 5px;
+            transition: .3s;
+            cursor: pointer;
+            &.active {
+                background: $purple;
+                color: white;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &-item {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    @include mq('tablet') {
+        &-tabs {
+            margin-bottom: 2rem;
+            li {
+                padding: .5rem .25rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.o-benefits {
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+    &-items {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: 40px;
+    }
+    @include mq('desktop') {
+        padding-top: 1.75rem;
+        padding-bottom: 3rem;
+        &-items {
+            gap: .5rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+    @include mq('tablet') {
+        padding-top: 1.25rem;
+        padding-bottom: 2rem;
+    }
+}

@@ -1,0 +1,29 @@
+.a-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    a {
+        margin-right: 1rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @include mq('desktop') {
+        margin-left: .5rem;
+        a {
+            margin-right: .5rem;
+            img {
+                display: block;
+                width: 1rem;
+                height: 1rem;
+                object-fit: contain;
+            }
+        }
+    }
+    @include mq('phone-wide') {
+        margin-left: 1rem;
+        a{
+            margin-right: 1rem;
+        }
+    }
+}

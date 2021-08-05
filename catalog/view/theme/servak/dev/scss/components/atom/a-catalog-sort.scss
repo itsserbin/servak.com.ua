@@ -1,0 +1,17 @@
+.a-catalog-sort {
+    select {
+        padding: 0;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        width: auto;
+    }
+    @include mq('phablet'){
+        width: 100%;
+        select {
+            margin-top: 1rem;
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+            width: auto;
+        }
+    }
+}

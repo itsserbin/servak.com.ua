@@ -1,0 +1,60 @@
+.m-order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    .status {
+        &.done {
+            color: #57F287;
+            display: flex;
+            align-items: center;
+            &::after {
+                content: '';
+                background: url(../image/icons/done.svg) no-repeat;
+                background-size: contain;
+                width: 20px;
+                height: 20px;
+                margin-left: 1rem;
+
+            }
+        }
+    }
+    &-num, &-date, &-count {
+        margin-right: 1rem;
+    }
+    @include mq('desktop') {
+        padding: .75rem;
+        .status {
+            &.done {
+                &::after {
+                    width: 16px;
+                    height: 16px;
+                    margin-left: .5rem;
+                }
+            }
+        }
+    }
+    @include mq('tablet-wide') {
+        flex-wrap: wrap;
+        &-num, &-date, &-count {
+            margin-right: 0rem;
+            padding: .25rem;
+            width: 50%;
+        }
+        &-date {
+            text-align: end;
+        }
+        .status {
+            &.done {
+                &::after {
+                    width: 12px;
+                    height: 12px;
+                    margin-left: .25rem;
+                }
+            }
+        }
+    }
+}

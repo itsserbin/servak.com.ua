@@ -1,0 +1,48 @@
+.m-favorite {
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: 40px;
+        .m-product-card {
+            grid-column: span 4;
+        }
+    }
+    @include mq('desktop') {
+        &-list {
+            gap: 20px;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-list {
+            gap: 20px;
+            .m-product-card {
+                grid-column: span 6;
+            }   
+        }
+    }
+    @include mq('tablet') {
+        &-list {
+            gap: 16px;
+            .m-product-card {
+                grid-column: span 4;
+            }   
+        }
+    }
+    @include mq('tablet-small') {
+        &-list {
+            gap: 12px;
+            .m-product-card {
+                grid-column: span 6;
+            }   
+        }
+    }
+    @include mq('phone') {
+        &-list {
+            gap: 12px;
+            .m-product-card {
+                grid-column: span 12;
+            }   
+        }
+    }
+}

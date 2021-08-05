@@ -1,0 +1,66 @@
+.m-slider-nav {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    &__bottom {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .swiper-pagination {
+            margin-left: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+    }
+    @include mq('tablet') {
+        &__bottom {
+            .swiper-pagination {
+                margin-left: 1rem;
+                margin-right: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                
+                &-bullet {
+                    margin-right: .75rem;
+                    margin-top: .25rem;
+                margin-bottom: .25rem;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &-active {
+                        background: $purple;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.swiper-pagination {
+    position: relative;
+    z-index: 21;
+    display: flex;
+    &-bullet {
+        margin-right: 1rem;
+        &-active {
+            background: $purple;
+        }
+    }
+}
+.swiper-scrollbar {
+    margin-top: 1rem;
+}
+.swiper-container-horizontal>.swiper-scrollbar {
+    position: static;
+    height: 5px;
+    width: 100%;
+}
+.swiper-scrollbar-drag  {
+    background: $purple;
+}

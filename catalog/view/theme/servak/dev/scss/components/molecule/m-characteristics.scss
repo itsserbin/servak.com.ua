@@ -1,0 +1,49 @@
+.m-characteristics {
+    &-list {
+        li {
+            display: flex;
+            margin-bottom: 1rem;
+            img {
+                margin-right: .5rem;
+            }
+        }
+    }
+    &-items {
+        display: flex;
+        flex-direction: column;
+    }
+    &-item {
+        border-bottom: 1px solid $gray;
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0
+        }
+        h4 {
+            @extend%-semi;
+        }
+        select {
+            padding: 0;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    @include mq('desktop') {
+        &-item {
+            margin-bottom: 1.25rem;
+            h4 {
+                font-size: .875rem;
+            }
+            select {
+                font-size: .75rem;
+                padding: 0;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+            }
+        }
+    }
+    @include mq('tablet') {
+        &-list {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.a-drop-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3;
+    &::after {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        margin-left: .5rem;
+        background: url(../image/header/chevron-up-sharp.svg) no-repeat;
+        background-size: contain;
+        transition: .5s;
+    }
+    &.active {
+        &::after {
+            transform: rotate(-180deg);
+        }
+    }
+    &:hover {
+        color: $purple;
+    }
+    @include mq('phone-wide') {
+        &::after {
+            width: .75rem;
+            height: .75rem;
+            margin-left: .375rem;
+        }
+    }
+}

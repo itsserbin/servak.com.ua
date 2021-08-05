@@ -1,0 +1,28 @@
+.m-about-content {
+    padding-top: 2rem;
+    &__none {
+        display: none;
+    }
+    &__show {
+        position: relative;
+        &::after {
+            transition: .5s;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+            height: 48px;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+            z-index: 1;
+            content: '';
+            display: block;
+            right: 0;  
+            pointer-events: none;
+            opacity: 1;
+        }
+        &.active {
+            &::after {
+                opacity: 0;
+            }
+        }
+    }
+}

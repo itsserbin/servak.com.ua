@@ -1,0 +1,13 @@
+.o-cart {
+    padding-bottom: 5rem;
+    &-list {
+        margin-bottom: 2.5rem;
+    }
+    @include mq('tablet') {
+        &-list {
+            .price {
+                display: none;
+            }
+        }
+    }
+}

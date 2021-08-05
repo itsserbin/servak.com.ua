@@ -1,0 +1,109 @@
+.m-cart {
+    &-title {
+        display: grid;
+        grid-template-columns: repeat(36, 1fr);
+        grid-template-rows: auto;
+        gap: 28px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        .title {
+            font-size: 1rem;
+        }
+        .name {
+            grid-column: span 16;
+        }
+        .price {
+            grid-column: span 6;
+        }
+        .quantity {
+            grid-column: span 6;
+        }
+        .total {
+            grid-column: span 6;
+        }
+    }
+    &-item {
+        display: grid;
+        grid-template-columns: repeat(36, 1fr);
+        grid-template-rows: auto;
+        gap: 28px;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        border-bottom: 1px solid gray;
+        &:first-child {
+            border-top: 1px solid gray;
+        }
+    }
+    &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    @include mq('desktop') {
+        &-title {
+            gap: 16px;
+            .title {
+                font-size: .875rem;
+            }
+        }
+        &-item {
+            gap: 16px;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-title {
+            gap: 10px;
+            .title {
+                font-size: .75rem;
+            }
+        }
+        &-item {
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+            gap: 10px;
+        }
+    }
+    @include mq('tablet') {
+        &-item {
+            grid-template-columns: repeat(24, 1fr);
+            gap: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        &-title {
+            grid-template-columns: repeat(24, 1fr);
+            gap: 1rem;
+            .name {
+                grid-column: span 12;
+            }
+            .price {
+                display: none;
+            }
+            .quantity {
+                grid-column: span 5;
+            }
+            .total {
+                grid-column: span 5;
+                text-align: center;
+            }
+        }
+    }
+    @include mq('phablet') {
+        &-title {
+            display: none;
+        }
+        &-item {
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1rem;
+        }
+    }
+    @include mq('phone-wide') {
+        &-bottom {
+            flex-direction: column;
+            align-items: flex-end;
+            .a-cart-sum {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

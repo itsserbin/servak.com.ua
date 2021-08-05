@@ -1,0 +1,114 @@
+.o-cabinet {
+    padding-bottom: 3rem;
+    &-content {
+        display: flex;
+    }
+    &-right {
+        flex: 1;
+        &__item {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+    &-left {
+        width: 320px;
+        margin-right: 40px;
+    }
+    &-sidebar {
+        li {
+            border-top: 1px solid gray;
+            a {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                display: flex;
+                transition: .3s;
+                align-items: center;
+                span {
+                    margin-left: .75rem;
+                }
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+                svg.fill {
+                    path {
+                        fill: black;
+                    }
+                }
+                svg.stroke {
+                    path {
+                        stroke: black;
+                    }
+                }
+            }
+            &:hover {
+                a {
+                    @extend%-semi;
+                    svg.fill {
+                        path {
+                            fill: $purple;
+                        }
+                    }
+                    svg.stroke {
+                        path {
+                            stroke: $purple;
+                        }
+                    }
+                }
+            }
+            &.active {
+                a {
+                    @extend%-semi;
+                    svg.fill {
+                        path {
+                            fill: $purple;
+                        }
+                    }
+                    svg.stroke {
+                        path {
+                            stroke: $purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq('desktop') {
+        &-left {
+            width: 280px;
+            margin-right: 30px;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-left {
+            width: 240px;
+            margin-right: 20px;
+        }
+    }
+    @include mq('tablet') {
+        &-content {
+            flex-direction: column;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-sidebar {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid gray;
+            margin-bottom: 1rem;
+            justify-content: space-evenly;
+            li {
+                border: none;
+                a {
+                    padding: 1rem;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

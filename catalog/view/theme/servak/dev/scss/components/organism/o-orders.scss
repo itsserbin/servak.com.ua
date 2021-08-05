@@ -1,0 +1,29 @@
+.o-orders {
+    &-list {
+        display: flex;
+        flex-direction: column;
+        background: $gray-light;
+        padding: 5rem;
+    }
+    @include mq('desktop-wide') {
+        &-list {
+            padding: 3rem;
+        }
+    }
+    @include mq('desktop') {
+        &-list {
+            padding: 1.5rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-list {
+            padding: 1rem;
+        }
+    }
+    @include mq('phone-wide') {
+        &-list {
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.m-navigation {
+    &-list {
+        display: flex;
+        align-items: center;
+        li {
+            margin-right: 1.5rem;
+            a {
+                transition: .3s;
+            }
+            &:hover {
+                a {
+                    color: $purple;
+                }
+            }
+        }
+    }
+    @include mq('desktop') {
+        &-list {
+            li {
+                margin-right: 1rem;
+            }
+        }
+    }
+    @include mq('tablet-wide') {
+        display: none;
+    }
+}

@@ -1,0 +1,22 @@
+.o-comparison {
+    &-item {
+        margin-bottom: 40px;
+        border-bottom: 1px solid rgba(90, 92, 102, 0.5);
+        &.e--top {
+            border: none;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-item {
+            margin-bottom: 20px;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-content {
+            overflow-x: auto;
+        }
+        &-list {
+            min-width: 640px;
+        }
+    }
+}

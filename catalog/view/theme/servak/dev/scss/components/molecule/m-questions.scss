@@ -1,0 +1,48 @@
+.m-questions {
+    &-left {
+        width: 35%;
+        padding-right: 2rem;
+        padding-top: 3rem;
+    }
+    &-right {
+        width: 65%;
+    }
+    &-item {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(90, 92, 102, 0.4);
+    }
+    
+    @include mq('desktop') {
+        &-item {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-item {
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+    }
+    @include mq('tablet') {
+        &-item {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    @include mq('tablet-small') {
+        &-left {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-item {
+            padding-top: .875rem;
+            padding-bottom: .875rem;
+            border-bottom: 1px solid rgba(90, 92, 102, 0.4);
+        }
+    }
+}

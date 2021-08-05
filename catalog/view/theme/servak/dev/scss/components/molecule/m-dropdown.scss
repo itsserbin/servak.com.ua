@@ -1,0 +1,35 @@
+.m-dropdown {
+    position: relative;
+    &-list {
+        position: absolute;
+        z-index: 24;
+        top: 110%;
+        right: 0;
+        display: none;
+        text-align: left;
+        min-width: 100%;
+        width: max-content;
+        background: white;
+        padding: .5rem;
+        box-shadow: 0px 5px 8px 4px rgba(34, 60, 80, 0.2);
+        li {
+            margin: 1rem 0;
+            &.divider {
+                height: 1px;
+                background: black;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    @include mq('tablet') {
+        &.e--top {
+            display: none;
+        }
+    }
+}

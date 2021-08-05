@@ -1,0 +1,30 @@
+.a-delivery {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray;
+    &-title {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        &::after {
+            content: '';
+            display: block;
+            background: url(../image/header/chevron-up-sharp.svg);
+            width: 1rem;
+            height: 1rem;
+            background-size: contain;
+            transition: .5s;
+        }
+        &.active {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &-show {
+        padding-top: 1rem;
+        display: none;
+    }
+}

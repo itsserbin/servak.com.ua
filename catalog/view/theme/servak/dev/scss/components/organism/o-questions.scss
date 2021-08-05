@@ -1,0 +1,27 @@
+.o-questions {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    &-content {
+        display: flex;
+        padding-bottom: 5rem;
+        border-bottom: 1px solid $gray;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    @include mq('tablet') {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+    @include mq('tablet-small') {
+        &-content {
+            flex-direction: column;
+            border: none;
+            padding-bottom: 2rem;
+        }
+    }
+    @include mq('phone-wide') {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+}

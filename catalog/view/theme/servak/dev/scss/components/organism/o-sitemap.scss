@@ -1,0 +1,97 @@
+.o-sitemap {
+    .row {
+        display: flex;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        .col {
+            width: 50%;
+            margin-right: 1rem;
+            &:last-child {
+                margin-right: 0;
+            }
+            ul {
+                margin-top: 1.25rem;
+                list-style: disc;
+                padding-left: 1rem;
+                li {
+                    @extend%-mid; 
+                    font-size: 1.25rem;  
+                    margin-bottom: 1.25rem;
+                    a {
+                        transition: .3s;
+                        &:hover {
+                            color: $purple;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                ul {
+                    li {
+                        font-size: 1rem;
+                    }
+                    padding-left: 2rem;
+                    list-style: circle;
+                    ul {
+                        li {
+                            font-size: .875rem;
+                        }
+                        padding-left: 3rem;
+                        list-style: square;
+                    }
+                }
+            }
+        }
+    }
+    @include mq('tablet-wide') {
+        .row {
+            .col {
+                ul {
+                    margin-top: 1rem;
+                    li {
+                        font-size: 1rem;  
+                        margin-bottom: 1rem;
+                    }
+                    ul {
+                        li {
+                            font-size: .875rem;
+                        }
+                        ul {
+                            li {
+                                font-size: .75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq('tablet') {
+        .row {
+            padding-top: 2rem;
+            .col {
+                ul {
+                    margin-top: .75rem;
+                    li {
+                        font-size: .875rem;  
+                        margin-bottom: .75rem;
+                    }
+                    ul {
+                        li {
+                            font-size: .75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq('phone-wide') {
+        .row {
+            padding-top: 1rem;
+            flex-direction: column;
+            .col {
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+    }
+}

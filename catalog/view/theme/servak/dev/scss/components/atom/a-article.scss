@@ -1,0 +1,21 @@
+.a-article {
+    &-title {
+        margin-bottom: .75rem;
+        transition: .3s;
+    }
+    &-link {
+        margin-bottom: 1.5rem;
+        transition: .3s;
+        .e--sm {
+            color: $gray;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            .a-article-title {
+                text-decoration: underline;
+            }
+        }
+    }
+}

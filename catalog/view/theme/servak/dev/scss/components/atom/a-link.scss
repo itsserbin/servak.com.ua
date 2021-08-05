@@ -1,0 +1,93 @@
+.a-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    transition: .3s;
+    &:hover {
+        color: $purple;
+        &::after {
+            background: url(.../image/arrow_right_alt_purple.svg) no-repeat;
+            background-size: contain;
+        }
+    }
+    &.e--before {
+        &::after {
+            display: none;
+        }    
+        &::before {
+            margin-right: .5rem;
+            content: '';
+            background: url(.../image/arrow_right_alt.svg) no-repeat;
+            transform: rotate(180deg);
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            display: block;
+            transition: .3s;    
+        }
+        &:hover {
+            &::before {
+                background: url(.../image/arrow_right_alt_purple.svg) no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    &::after {
+        margin-left: .5rem;
+        content: '';
+        background: url(.../image/arrow_right_alt.svg) no-repeat;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        display: block;
+        transition: .3s;
+    }
+    &.a-btn-back {
+        display: none;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        &.active {
+            display: flex;
+            justify-content: flex-start;
+            &.no-active {
+                display: none;
+            }
+        }
+        &::after {
+            display: none;
+        }
+        &::before {
+            margin-right: .5rem;
+            content: '';
+            background: url(.../image/arrow_right_alt.svg) no-repeat;
+            transform: rotate(180deg);
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            display: block;
+        }   
+    }
+    @include mq('tablet-small') {
+        &::after {
+            margin-left: .125rem;
+            width: 20px;
+            height: 20px;
+        }
+        &.a-btn-back {
+            &::before {
+                margin-right: .125rem;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &.e--before {    
+            &::before {
+                margin-right: .125rem;
+                width: 20px;
+                height: 20px;    
+                background-size: contain;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.o-recommendation {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    &-slider {
+        overflow: hidden;
+    }
+    @include mq('tablet-wide') {
+        padding-bottom: 1.75rem;
+        padding-top: 1.75rem;
+    }
+    @include mq('tablet') {
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
+}

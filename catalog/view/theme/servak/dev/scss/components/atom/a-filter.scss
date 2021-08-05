@@ -1,0 +1,42 @@
+.a-filter {
+    background: $gray-light;
+    display: flex;
+    align-items: center;
+    padding: 5px 1rem;
+    margin: .5rem .5rem;
+    border-radius: 5px;
+    &-del {
+        margin-left: .5rem;
+        font-size: 1.5rem;
+    }
+    &-cancel {
+        margin-right: 1rem;
+    }
+    &-count {
+        margin-right: 1rem;
+    }
+    &-btn {
+        justify-content: flex-end;
+        display: none;
+        align-items: center;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        svg {
+            margin-left: .5rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        margin: .25rem;
+        &-del {
+            font-size: 1.125rem;
+        }
+        &-btn {
+            display: flex;
+        }
+    }
+    @include mq('phablet') {
+        &-btn {
+           justify-content: flex-start;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.m-footer-list {
+    display: flex;
+    flex-direction: column;
+    &__item {
+        margin-bottom: 1rem;
+    }
+    &__title {
+        margin-bottom: 1rem;
+    }
+    &__social {
+        display: flex;
+        li {
+            a {
+                padding: .5rem;
+                svg {
+                    path {
+                        fill: black;
+                        opacity: .7;
+                        transition: .5s;
+                    }
+                }
+                &:hover {
+                    svg {
+                        path {
+                            fill: $purple;
+                            opacity: 1;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+    @include mq('tablet') {
+        width: 50%;
+        margin-bottom: .5rem;
+    }
+    @include mq('phablet') {
+        width: 100%;
+        align-items: center;
+    }
+}

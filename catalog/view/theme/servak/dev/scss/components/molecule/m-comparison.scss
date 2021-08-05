@@ -1,0 +1,23 @@
+.m-comparison {
+    &-items {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: 40px;
+    }
+    @include mq('desktop-wide') {
+        &-items {
+            gap: 20px;
+        }
+    }
+    @include mq('tablet-wide') {
+        &-items {
+            gap: 16px;
+        }
+    }
+    @include mq('tablet') {
+        &-items {
+            gap: 10px;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.a-ico-link {
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    span {
+        margin-left: .5rem;
+    }
+    @include mq('desktop') {
+        margin-right: 1rem;
+    }
+    @include mq('tablet-wide') {
+        span {
+            margin-left: .375rem;
+            font-size: .75rem;
+        }
+    }
+    @include mq('tablet') {
+        &.a-login-link, &.a-comparison-link, &.a-fav-link {
+            display: none;
+        }
+    }
+    @include mq('phone-wide') {
+        margin-right: 0;
+        span {
+            margin-left: .25rem;
+            font-size: .625rem;
+        }
+    }
+}

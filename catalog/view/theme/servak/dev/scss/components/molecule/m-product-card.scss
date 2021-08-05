@@ -1,0 +1,105 @@
+.m-product-card {
+    max-width: 320px;
+    width: 100%;
+    height: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background: $gray-light;
+    cursor:default;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &:hover {
+        .m-markers {
+            opacity: 1;
+        }
+        .a-product-card-name {
+            text-decoration: underline;
+        }
+    }
+    &__content {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56%;
+        margin-bottom: 1rem;
+        img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__rating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include mq('desktop') {
+        &__content {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+    }
+    @include mq('tablet-wide') {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        &__content {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    @include mq('tablet') {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        &__img {
+            width: 80%;
+            text-align: center;
+            padding-bottom: 56%;
+            margin-bottom: .875rem;
+        }
+        &__content {
+            width: 100%;
+            padding-left: .75rem;
+            padding-right: .75rem;
+        }
+    }
+    @include mq('phone-wide') {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        &__content {
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
+    }
+    @include mq('phone') {
+        max-width: 100%;
+        &__content {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
+.product-card-link {
+    display: block;
+    width: 100%;
+    &.e--flex-one {
+        flex: 1;
+    }
+}
